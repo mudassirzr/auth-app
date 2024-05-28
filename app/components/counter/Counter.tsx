@@ -14,8 +14,9 @@ import {
 
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import styles from "./Counter.module.css";
+import { withProtected } from "../hocs/routers";
 
-export const Counter = () => {
+const Counter = () => {
   const dispatch = useAppDispatch();
   const count = useAppSelector(selectCount);
   const status = useAppSelector(selectStatus);
@@ -79,3 +80,4 @@ export const Counter = () => {
     </div>
   );
 };
+export default withProtected(Counter);

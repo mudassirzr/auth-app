@@ -2,10 +2,11 @@
 import { useGetQuotesQuery } from "@/lib/features/quotes/quotesApiSlice";
 import { useState } from "react";
 import styles from "./Quotes.module.css";
+import { withProtected } from "../hocs/routers";
 
 const options = [5, 10, 20, 30];
 
-export const Quotes = () => {
+const Quotes = () => {
   const [numberOfQuotes, setNumberOfQuotes] = useState(10);
   // Using a query hook automatically fetches data and returns query values
   const { data, isError, isLoading, isSuccess } =
@@ -58,3 +59,4 @@ export const Quotes = () => {
 
   return null;
 };
+export default withProtected(Quotes)
