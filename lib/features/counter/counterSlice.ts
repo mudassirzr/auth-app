@@ -87,3 +87,4 @@ export const incrementIfOdd =
       dispatch(incrementByAmount(amount));
     }
   };
+export const counterReducer = counterSlice.reducer

@@ -46,6 +46,6 @@ export const { login, logout } =
 
 // Selectors returned by `slice.selectors` take the root state as their first argument.
 export const { selectLoginState } = authSlice.selectors;
-
+export const authReducer = authSlice.reducer;
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.
