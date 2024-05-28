@@ -22,7 +22,7 @@ function withPublic(Component: React.FC) {
 }
 
 function withProtected(Component: React.FC) {
-  return function WithPublic(props: any) {
+  return function WithProtected(props: any) {
     const loggedIn = useAppSelector(selectLoginState);
     const router = useRouter();
     useEffect(() => {
